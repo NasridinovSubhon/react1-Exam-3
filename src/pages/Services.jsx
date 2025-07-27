@@ -326,7 +326,7 @@ const Services = () => {
 
 
       <div className="xl:w-[70%] m-auto sm:w-[95%] mt-[100px]">
-        <h1 className="xl:text-[40px] sm:text-[30px] text-center mb-10">Our Projects</h1>
+        <h1 className="xl:text-[40px] sm:text-[30px] text-center mb-10">Todo List</h1>
         <Drawer>
 
           <DrawerTrigger asChild>
