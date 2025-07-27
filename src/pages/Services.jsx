@@ -21,6 +21,9 @@ import iReq from "@/assets/request-form.svg"
 import t1 from "@/assets/panel-open.svg"
 import t2 from "@/assets/panel.svg"
 import hay2 from "@/assets/illustration (3).svg"
+import benef from "@/assets/Benefits.svg"
+import profyle from "@/assets/user-profile.svg"
+import swap from "@/assets/swaper.jpg"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -233,7 +236,7 @@ const Services = () => {
   return (
     <div className=''>
 
-      <div className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh]">
+      <div data-aos="zoom-in-up" className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh]">
         <br /><br /><br /><br /><br /><br className="xl:block hidden" /><br className="xl:block hidden" />
         <div className='xl:w-[70%] sm:[95%] m-auto flex items-center justify-between xl:flex-nowrap sm:flex-wrap '>
           <div className='xl:w-[68%]'>
@@ -248,34 +251,35 @@ const Services = () => {
 
 
       <div className='xl:w-[70%] sm:w-[95%] mt-[100px] flex items-center justify-between m-auto xl:flex-nowrap sm:flex-wrap'>
-        <div className='xl:w-[50%]'>
-          <h1 className='xl:text-[23px] sm:text-[15px] sm:text-center xl:text-start'>
+        <div data-aos="zoom-out-right" className='xl:w-[50%]'>
+          <h1 className='xl:text-[20px] sm:text-[15px] sm:text-center xl:text-start'>
             Createx SEO Agency is a full-service digital marketing agency. We help businesses make more money through a wealth of performance data and market research. We create science-based SEO strategies to empower our clients.
           </h1>
         </div>
 
-        <div className='xl:w-[50%] sm:w-[90%] flex flex-wrap gap-[15px] items-center'>
+        <div data-aos="zoom-out-left" className='xl:w-[50%] sm:w-[90%] flex flex-wrap gap-[15px] items-center'>
           {[...Array(4)].map((_, i) => (
-            <div key={i} className='flex items-center justify-between xl:w-[48%] sm:w-[40%] xl:m-0 sm:m-auto sm:mt-2 xl:mt-0'>
+            <div key={i} className='flex gap-[10px] items-center justify-between xl:w-[48%] sm:w-[40%] xl:m-0 sm:m-auto sm:mt-2 xl:mt-0'>
               <img src={ik} alt="" className='w-[30%]' />
-              <h1 className='xl:text-[17px] sm:text-[9px]'>Top SEO Companies 2020 by Clutch</h1>
+              <h1 className='xl:text-[13px] sm:text-[9px]'>Top SEO Companies 2020 by Clutch</h1>
             </div>
           ))}
         </div>
       </div>
 
-      <img src={cp} alt="" className='xl:w-[70%] m-auto xl:mt-[100px] xl:mb-[100px] sm:w-[100%] sm:mt-[40px] sm:mb-[30px]' />
+      <img data-aos="flip-up" src={cp} alt="" className='xl:w-[70%] m-auto xl:mt-[100px] xl:mb-[100px] sm:w-[100%] sm:mt-[40px] sm:mb-[30px]' />
 
 
-      <div className='flex xl:w-[70%] m-auto xl:flex-nowrap sm:flex-wrap items-center justify-between mt-[80px]'>
-        <div className='xl:w-[35%] sm:w-[90%] xl:m-0 sm:m-auto '>
+      <div data-aos="fade-up"
+        data-aos-duration="3000" className='flex xl:w-[70%] m-auto xl:flex-nowrap sm:flex-wrap items-center justify-between mt-[80px]'>
+        <div data-aos="zoom-out-up" className='xl:w-[35%] sm:w-[90%] xl:m-0 sm:m-auto '>
           <h1 className='xl:text-[35px] sm:text-[28px]'>Createx Agency</h1>
           <h1 className='xl:text-[14px] sm:text-[11px] mt-[30px]'>
             Lacus ac mollis vitae viverra. Tincidunt est, feugiat montes, viverra ullamcorper mi dui, nulla pharetra. Sapien urna nullam elit diam mauris orci. Volutpat quam tempus justo, aliquam. Tortor ultrices mattis eget orci eu nisi sed augue odio. Et senectus risus, pharetra, tristique libero. Dolor risus ac quam dictum mattis ultrices laoreet sapien. Feugiat lacus, suscipit eu sociis et quis hendrerit. Cras at ac magna ultricies orci.
           </h1>
           <button className='rounded-md bg-[#7772F1] xl:p-[7px_10px] sm:p-[4px_10px] text-white mt-[30px] '>More about us</button>
         </div>
-        <img src={hay} alt="" className='xl:w-[55%] sm:w-[90%] xl:m-0 sm:m-auto xl:mt-0 sm:mt-[40px]' />
+        <img data-aos="zoom-out" src={hay} alt="" className='xl:w-[55%] sm:w-[90%] xl:m-0 sm:m-auto xl:mt-0 sm:mt-[40px]' />
       </div>
 
       <img src={cirkle} alt="" className='xl:w-[40%] m-auto xl:mt-[120px] sm:mt-[70px] sm:w-[95%]' />
@@ -285,7 +289,7 @@ const Services = () => {
         <h1 className='xl:text-[40px] sm:text-[30px] text-center'>Our services</h1>
         <img src={tabs} alt="" className='mt-[30px]' />
         <div className='flex items-center gap-[25px] flex-wrap xl:mt-[50px] sm:mt-[30px]'>
-          <div className='xl:w-[43%] sm:w-[90%] xl:m-0 sm:m-auto'>
+          <div data-aos="fade-down-right" className='xl:w-[43%] sm:w-[90%] xl:m-0 sm:m-auto'>
             <h1 className='text-[27px]'>Complete Workflow For Any SEO Professional</h1>
             {[...Array(6)].map((_, i) => (
               <div key={i} className='flex items-center gap-[15px] mt-[20px]'>
@@ -298,15 +302,15 @@ const Services = () => {
               <button className='rounded-md bg-[#7772F1] xl:p-[7px_10px] sm:p-[4px_10px] text-white mt-[30px] '>Try SEO toolkit</button>
             </div>
           </div>
-          <img src={ilus1} alt="" className='xl:w-[54%] sm:w-[95%] xl:m-0 sm:m-auto' />
+          <img data-aos="fade-down-left" src={ilus1} alt="" className='xl:w-[54%] sm:w-[95%] xl:m-0 sm:m-auto' />
         </div>
       </div>
 
 
       <div className='py-[30px] mt-[100px] bg-black'>
         <div className='xl:w-[70%] m-auto sm:w-[95%] flex flex-wrap items-center justify-between'>
-          <img src={dukh} alt="" className='xl:w-[35%] sm:w-[80%] xl:m-0 sm:m-auto' />
-          <div className='xl:w-[50%] sm:w-[80%] xl:m-0 sm:m-auto text-white text-center'>
+          <img data-aos="flip-left" src={dukh} alt="" className='xl:w-[35%] sm:w-[80%] xl:m-0 sm:m-auto' />
+          <div data-aos="flip-right" className='xl:w-[50%] sm:w-[80%] xl:m-0 sm:m-auto text-white text-center'>
             <h1 className='text-[40px]'>Get a Free SEO Analysis!</h1>
             <input type="text" className='bg-[#FFFFFF33] m-3 p-[5px]' placeholder="Name" />
             <input type="text" className='bg-[#FFFFFF33] m-3 p-[5px]' placeholder="Email" />
@@ -317,7 +321,7 @@ const Services = () => {
       </div>
 
 
-      <div className='mt-[100px] xl:w-[70%] m-auto sm:w-[95%] flex flex-wrap items-center justify-between'>
+      <div data-aos="flip-up" className='mt-[100px] xl:w-[70%] m-auto sm:w-[95%] flex flex-wrap items-center justify-between'>
         <div className='xl:w-[57%] sm:w-[90%] sm:text-center xl:text-start'>
           <h1 className='xl:text-[40px]'>Frequently Asked Questions</h1>
           <img src={t1} alt="" className='mt-[10px]' />
@@ -453,7 +457,8 @@ const Services = () => {
           {data.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="flex justify-center gap-6 flex-wrap items-center">
+                <div data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom" className="flex justify-center gap-6 flex-wrap items-center">
                   <div
                     className={`relative w-[300px] h-[400px] overflow-hidden rounded-2xl shadow-lg transition-transform duration-500`}>
                     <div className="p-4 flex items-center justify-between absolute top-4 left-4 right-4 z-20 rounded-2xl bg-white/20 backdrop-blur-xl text-white cursor-default">
@@ -606,11 +611,206 @@ const Services = () => {
       </div>
 
 
+      <div className="xl:w-[70%] sm:w-[95%] text-center m-auto mt-[100px]">
+        <img data-aos="zoom-in" src={benef} alt="" className="w-[100%] " />
+      </div>
+
+      <div className="xl:w-[70%] sm:w-[95%] text-center m-auto mt-[100px]">
+        <h1 className="xl:text-[40px] sm:text-[18px]">Flexible pricing plans</h1>
+        <div className="flex justify-center items-center">
+          <button className="bg-[#7772F1] p-[8px_45px] rounded-3xl"> Monthly </button>
+          <button className="text-[#7772F1] border-[#7772F1] border-2 p-[8px_45px] rounded-3xl"> Monthly </button>
+        </div>
+
+        <div className="flex flex-wrap gap-[20px] items-center mt-[40px]">
+          <div data-aos="zoom-out-up" className="dark:bg-black dark:text-white bg-white text-black  xl:w-[31%] sm:w-[80%] xl:m-0 sm:m-auto rounded-md p-[20px] text-center border-2">
+            <h1 className="xl:text-[26px] sm:text-[17px] mt-[20px]"> Basic </h1>
+            <h1 className="xl:text-[40px] sm:text-[18px] mt-[20px] text-[#7772F1]"> $24 <span className="xl:text-[18px] sm:text-[15px]">/mon</span></h1>
+            <div className="flex gap-[18px] items-center justify-center mt-[20px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <button className="text-[#7772F1]  border-[#7772F1] border-2 p-[8px_30px] rounded-sm  mt-[20px] mb-4">
+              Choose plan
+            </button>
+          </div>
+          <div data-aos="zoom-out-up" className="dark:bg-white dark:text-black bg-black text-white xl:w-[31%] sm:w-[80%] xl:m-0 sm:m-auto rounded-md p-[20px] text-center border-2 py-[20px]">
+            <h1 className="xl:text-[40px] sm:text-[18px] mt-[20px] text-[#03CEA4]"> <span className="xl:text-[18px] sm:text-[15px]">/mon</span></h1>
+            <hr className="mt-[40px] mb-[15px]" />
+            <div className="flex gap-[18px] items-center justify-center mt-[20px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <button className="text-[#7772F1]  border-[#7772F1] border-2 p-[8px_30px] rounded-sm  mt-[20px] mb-4">
+              Choose plan
+            </button>
+          </div>
+
+          <div data-aos="zoom-out-up" className="dark:bg-black dark:text-white bg-white text-black  xl:w-[31%] sm:w-[80%] xl:m-0 sm:m-auto rounded-md p-[20px] text-center border-2">
+            <h1 className="xl:text-[26px] sm:text-[17px] mt-[20px]"> Basic </h1>
+            <h1 className="xl:text-[40px] sm:text-[18px] mt-[20px] text-[#7772F1]"><span className="xl:text-[18px] sm:text-[15px]">/mon</span></h1>
+            <div className="flex gap-[18px] items-center justify-center mt-[20px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <div className="flex gap-[18px] items-center justify-center mt-[10px]">
+              <img src={check} alt="" />
+              <h1>Advanced Analytics</h1>
+            </div>
+            <button className="text-[#7772F1]  border-[#7772F1] border-2 p-[8px_30px] rounded-sm  mt-[20px] mb-4">
+              Choose plan
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500" className="xl:w-[70%] sm:w-[95%] m-auto text-center mt-[100px]">
+        <h1 className="xl:text-[44px] sm:text-[20px]">What our clients say</h1>
+        <div className="mt-[50px] w-[90%] p-[10%] text-center shadow-lg  m-auto">
+          <h1 className="xl:text-[20px] sm:text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</h1>
+          <img src={profyle} alt="" className="mt-[30px]" />
+        </div>
+      </div>
+
+      <div className="flex  justify-between mt-[100px]">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper mt-[100px] xl:w-[70%] sm:w-[95%] m-auto"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="w-[100%]">
+              <h1 className="xl:text-[40px] sm:text-[20px]">Latest news</h1>
+              <h1 className="mt-[20px]">Check more posts in our blog for featured news and advertising insights</h1>
+              <button className="text-[#7772F1]  border-[#7772F1] border-2 p-[8px_30px] rounded-sm  mt-[20px] mb-4">
+                Choose plan
+              </button>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+
+            <div className="w-[100%] ">
+              <img src={swap} alt="" className="w-[100%]" />
+              <h1 className="text-[15px] mt-[8px]">SEO
+                July 5, 2020
+                By Diane Mccoy</h1>
+              <h1 className="mt-[40px]">Read more >> </h1>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+
+            <div className="w-[100%] ">
+              <img src={swap} alt="" className="w-[100%]" />
+              <h1 className="text-[15px] mt-[8px]">SEO
+                July 5, 2020
+                By Diane Mccoy</h1>
+              <h1 className="text-[14px]">The Basics of Blogging Search Engine Optimization.</h1>
+              <p className="text-[14px]">Mauris tincidunt sollicitudin  </p>
+              <h1 className="">Read more >> </h1>
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+      </div>
+
 
     </div >
   )
 }
 
 export default Services
-
-

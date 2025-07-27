@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/drawer"
 
 
+import insIcon from "@/assets/socials.svg"
+import avad from "@/assets/awards.svg"
 
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
@@ -101,7 +103,7 @@ const Layout = () => {
     GetData()
   }, [])
 
- 
+
 
 
   return (
@@ -128,19 +130,53 @@ const Layout = () => {
               </Link>
             </li >
           </ul >
-
-
-         
-
-
           <Switch id="airplane-mode" onClick={toggleTheme} checked={theme === "dark" ? true : false} />
-
         </div>
       </div>
 
 
 
       <Outlet />
+
+      <div className="xl:mt-[200px] sm:mt-[150px] bg-[#1E212C] text-[#FFFFFF] pt-[50px]">
+        <div className="xl:w-[75%] sm:w-[95%] flex justify-between flex-wrap m-auto" >
+          <div className="xl:w-[32%] sm:w-[95%] sm:m-auto xl:m-0 xl:mb-0 sm:mb-10">
+            <img src={logo} alt="" className='xl:w-[100px] sm:w-[50px] xl:m-0 sm:m-auto' />
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[14px] xl:text-start sm:text-center">Createx SEO Agency is a full-service digital marketing agency. We help businesses make more money through a wealth of performance data and market research. We create science-based SEO strategies to empower our clients.</h1>
+            <img src={insIcon} alt="" className='xl:w-[200px] sm:w-[100px] xl:m-0 sm:m-auto  xl:mt-[25px] sm:mt-[25px] ' />
+          </div>
+          <div className="xl:w-[15%] xl:block sm:block">
+            <h1  >COMPANY</h1>
+            <h1 className="text-[14px] mt-[12px]" >About Us</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >Case Studies</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >About Us</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >Case Studies</h1>
+          </div>
+          <div className="xl:w-[15%] xl:block sm:block">
+            <h1  >SERVICES</h1>
+            <h1 className="text-[14px] mt-[12px]" >Social Media</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >SEO</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >Research</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >Payed Traffic</h1>
+          </div>
+          <div className="xl:w-[15%] xl:block sm:block">
+            <h1  >CONTACT US</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px]mt-[12px]" >(405) 555-0128</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px]mt-[12px]" >hello@createx.com</h1>
+
+          </div>
+          <div className="xl:w-[20%] xl:block sm:hidden">
+            <h1  >SIGN UP TO OUR NEWSLETTER</h1>
+            <input type="text" className="w-full p-[6px] rounded-md bg-[#FFFFFF1F] mt-[18px]" />
+            <h1 className="mt-[12px] xl:text-[12px] sm:text-[10px] " >*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</h1>
+
+          </div>
+
+        </div>
+        <hr className="mt-[50px] pb-[40px]" />
+
+      </div>
+
     </div >
   )
 }

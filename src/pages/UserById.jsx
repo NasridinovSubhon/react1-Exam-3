@@ -33,9 +33,9 @@ const UserById = () => {
   }
 
   return (
-    <div className='mt-[300px]'>
+    <div className='mt-[300px] '>
 
-      <div className=" xl:w-[40%] m-auto absolute xl:bottom-[45%] sm:bottom-[30%] left-4 right-4 rounded-2xl bg-white/30 dark:bg-white/10 backdrop-blur-md p-4 flex flex-wrap justify-around gap-4 shadow-lg sm:w-[90%]">
+      <div className=" xl:w-[40%] m-auto absolute xl:bottom-[45%] sm:bottom-[57%] left-4 right-4 rounded-2xl bg-white/30 dark:bg-white/10 backdrop-blur-md p-4 flex flex-wrap justify-around gap-4 shadow-lg sm:w-[90%]">
         <h2 className="w-full text-center text-lg font-semibold text-gray-800 dark:text-white">
           {data.name}
         </h2>
@@ -53,8 +53,7 @@ const UserById = () => {
           </div>
         ))}
       </div>
-
-
+      <br />
     </div>
   )
 }
