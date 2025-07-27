@@ -102,29 +102,7 @@ const data = [
     goal: 349,
   },
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import * as Yup from 'yup';
 
 
 const Services = () => {
@@ -159,8 +137,8 @@ const Services = () => {
     }
   }
 
-  const forMik = useFormik({
 
+  const forMik = useFormik({
     initialValues: {
       Name: "",
       Description: "",
@@ -205,14 +183,18 @@ const Services = () => {
   });
 
 
+  const validationSchema = Yup.object().shape({
+    Name: Yup.string().required("Name is required"),
+    Description: Yup.string().required("Description is required"),
+  })
+
   const fromikAdd = useFormik({
     initialValues: {
       Name: "",
       Images: null,
       Description: ""
     },
-
-
+    validationSchema,
 
     onSubmit: async (values, { resetForm }) => {
       const formdata = new FormData()
@@ -233,11 +215,20 @@ const Services = () => {
     fromikAdd.setFieldValue("Images", e.target.files[0])
   }
 
+  async function edStatus(id) {
+    try {
+      await axios.put(`https://to-dos-api.softclub.tj/completed?id=${id}`)
+      Getdata()
+    } catch (error) {
+
+    }
+  }
+
   return (
     <div className=''>
 
       <div data-aos="fade-up"
-        data-aos-duration="3000"  className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh] text-white">
+        data-aos-duration="3000" className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh] text-white">
         <br /><br /><br /><br /><br /><br className="xl:block hidden" /><br className="xl:block hidden" />
         <div className='xl:w-[70%] sm:[95%] m-auto flex items-center justify-between xl:flex-nowrap sm:flex-wrap '>
           <div className='xl:w-[68%]'>
@@ -363,6 +354,7 @@ const Services = () => {
                  dark:border-gray-700 rounded-lg shadow-sm 
                  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500
                  placeholder-transparent transition"
+                      error={fromikAdd.errors.Name}
                     />
                     <label
                       htmlFor="Name"
@@ -381,6 +373,7 @@ const Services = () => {
                   <div className="relative">
                     <label className="block mb-2 text-sm text-gray-600 dark:text-gray-300">Upload Image</label>
                     <input
+
                       onChange={handleChangeFile}
                       type="file"
                       className="block w-full text-sm text-gray-500
@@ -395,6 +388,7 @@ const Services = () => {
 
                   <div className="relative">
                     <input
+                      error={fromikAdd.errors.Description}
                       onChange={fromikAdd.handleChange}
                       type="text"
                       id="Description"
@@ -467,6 +461,14 @@ const Services = () => {
                       <div>
                         <p className="font-semibold text-lg truncate">Name: {e.name}</p>
                         <p className="mt-1 text-sm line-clamp-3" >Description: {e.description?.slice(0, 15)}</p>
+                        <p
+                          onClick={() => edStatus(e.id)}
+                          className={`
+                          mt-1 inline-block text-sm font-semibold px-3 py-1 rounded-full cursor-pointer transition
+                             ${e.isCompleted ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-red-100 text-red-800 hover:bg-red-200'} `}
+                        >
+                          Status: {e.isCompleted ? "Active" : "Inactive"}
+                        </p>
                       </div>
 
                       <Popover>

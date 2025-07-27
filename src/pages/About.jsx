@@ -396,7 +396,7 @@ const About = () => {
               <h1 className="text-[15px] mt-[8px]">SEO
                 July 5, 2020
                 By Diane Mccoy</h1>
-              <h1 className="mt-[40px]">Read more >> </h1>
+              <h1 className="mt-[40px]">Read more  </h1>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -408,7 +408,7 @@ const About = () => {
                 By Diane Mccoy</h1>
               <h1 className="text-[14px]">The Basics of Blogging Search Engine Optimization.</h1>
               <p className="text-[14px]">Mauris tincidunt sollicitudin  </p>
-              <h1 className="">Read more >> </h1>
+              <h1 className="">Read more  </h1>
             </div>
           </SwiperSlide>
 
