@@ -77,7 +77,11 @@ const data = [
 ]
 
 
-
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 
 
 const Layout = () => {
@@ -113,6 +117,30 @@ const Layout = () => {
       <div className='fixed top-0 w-full bg-[#000000c0] z-50 text-white'>
         <div data-aos="zoom-in-up" className='xl:w-[70%]  m-auto flex items-center justify-between py-[24px] sm:w-[95%]'>
           <img src={logo} alt="" className='xl:w-[100px] sm:w-[50px]' />
+
+          <Popover>
+            <PopoverTrigger className="xl:hidden sm:block">Menu</PopoverTrigger>
+            <PopoverContent>
+              <ul className=' flex items-center justify-between '>
+                <li>
+                  <Link href="" to="/" >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" to="stadies" >
+                    Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" to="about" >
+                    About Us
+                  </Link>
+                </li >
+              </ul >
+            </PopoverContent>
+          </Popover>
+
           <ul className=' items-center justify-between w-[45%] hidden md:flex'>
             <li>
               <Link href="" to="/" >
