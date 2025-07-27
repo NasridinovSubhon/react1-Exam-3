@@ -110,7 +110,7 @@ const Layout = () => {
     <div>
 
 
-      <div className='fixed top-0 w-full bg-[#00000037] z-50'>
+      <div className='fixed top-0 w-full bg-[#000000c0] z-50 text-white'>
         <div data-aos="zoom-in-up" className='xl:w-[70%]  m-auto flex items-center justify-between py-[24px] sm:w-[95%]'>
           <img src={logo} alt="" className='xl:w-[100px] sm:w-[50px]' />
           <ul className=' items-center justify-between w-[45%] hidden md:flex'>
@@ -161,8 +161,8 @@ const Layout = () => {
           </div>
           <div className="xl:w-[15%] xl:block sm:block">
             <h1  >CONTACT US</h1>
-            <h1 className="xl:text-[14px] sm:text-[10px]mt-[12px]" >(405) 555-0128</h1>
-            <h1 className="xl:text-[14px] sm:text-[10px]mt-[12px]" >hello@createx.com</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >(405) 555-0128</h1>
+            <h1 className="xl:text-[14px] sm:text-[10px] mt-[12px]" >hello@createx.com</h1>
 
           </div>
           <div className="xl:w-[20%] xl:block sm:hidden">

@@ -236,7 +236,8 @@ const Services = () => {
   return (
     <div className=''>
 
-      <div data-aos="zoom-in-up" className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh]">
+      <div data-aos="fade-up"
+        data-aos-duration="3000"  className="bg-[url('/src/assets/p1Bac.png')] xl:h-screen bg-cover bg-center sm:h-[70vh] text-white">
         <br /><br /><br /><br /><br /><br className="xl:block hidden" /><br className="xl:block hidden" />
         <div className='xl:w-[70%] sm:[95%] m-auto flex items-center justify-between xl:flex-nowrap sm:flex-wrap '>
           <div className='xl:w-[68%]'>
