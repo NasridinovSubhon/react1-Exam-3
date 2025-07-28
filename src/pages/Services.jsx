@@ -194,7 +194,6 @@ const Services = () => {
       Images: null,
       Description: ""
     },
-    validationSchema,
 
     onSubmit: async (values, { resetForm }) => {
       const formdata = new FormData()
@@ -328,7 +327,6 @@ const Services = () => {
       <div className="xl:w-[70%] m-auto sm:w-[95%] mt-[100px]">
         <h1 className="xl:text-[40px] sm:text-[30px] text-center mb-10">Todo List</h1>
         <Drawer>
-
           <DrawerTrigger asChild>
             <InteractiveHoverButton className="ml-[20px] mb-[20px]">
               ADD USER
@@ -373,7 +371,6 @@ const Services = () => {
                   <div className="relative">
                     <label className="block mb-2 text-sm text-gray-600 dark:text-gray-300">Upload Image</label>
                     <input
-
                       onChange={handleChangeFile}
                       type="file"
                       className="block w-full text-sm text-gray-500
@@ -382,10 +379,8 @@ const Services = () => {
                  file:bg-purple-50 file:text-purple-700
                  hover:file:bg-purple-100
                  dark:file:bg-[#2a2a2a] dark:file:text-white
-                 transition"
-                    />
+                 transition"/>
                   </div>
-
                   <div className="relative">
                     <input
                       error={fromikAdd.errors.Description}
@@ -405,13 +400,10 @@ const Services = () => {
                  peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base 
                  peer-placeholder-shown:text-gray-400
                  peer-focus:top-1 peer-focus:text-sm peer-focus:text-purple-600 
-                 transition-all"
-                    >
-                      Description
+                 transition-all"> Description
                     </label>
 
                   </div>
-
 
                 </div>
 
@@ -459,7 +451,7 @@ const Services = () => {
                     <div className="p-4 flex items-center justify-between absolute top-4 left-4 right-4 z-20 rounded-2xl bg-white/20 backdrop-blur-xl text-white cursor-default">
 
                       <div>
-                        <p className="font-semibold text-lg truncate">Name: {e.name}</p>
+                        <p className="font-semibold text-lg truncate">Name: {e.name.slice(0, 10)}</p>
                         <p className="mt-1 text-sm line-clamp-3" >Description: {e.description?.slice(0, 15)}</p>
                         <p
                           onClick={() => edStatus(e.id)}
