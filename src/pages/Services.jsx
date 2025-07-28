@@ -465,7 +465,7 @@ const Services = () => {
 
                       <Popover>
                         <PopoverTrigger>
-                          <EllipsisVertical className="text-cyan-400" />
+                          <EllipsisVertical className="text-cyan-100" />
                         </PopoverTrigger>
                         <PopoverContent >
                           <InteractiveHoverButton
